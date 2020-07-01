@@ -21,6 +21,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     #views of the core app
-    path('',include('core.urls'))
+    path('',include('core.urls')),
+
+    #views for the app service
+    path('',include('service.urls')),
 
 ]
+
+from django.conf import settings
+if settings.DEBUG: #this option here is not default, it is just to showing images in developing stage
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
