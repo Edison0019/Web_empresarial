@@ -26,6 +26,10 @@ urlpatterns = [
     #views for the app service
     path('',include('service.urls')),
 
+
+    #views for the app blog
+    path('',include('blog.urls'))
+
 ]
 
 from django.conf import settings
