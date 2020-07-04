@@ -5,7 +5,7 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
-{% for cont in posts %}
+{% for cont in category.get_posts.all %}
 <section class="page-section cta">
   <div class="container">
     <div class="row">
@@ -26,7 +26,7 @@
             <!-- this part here is for iterating in all the categories -->
             <em>
               {% for cat in cont.categories.all %}
-                <a href="{% url 'category' cat.id %}" class="link">{{cat.name}}</a>{% if not forloop.last %},{% endif %}
+                <a href="{% url 'category' category.id %}" class="link">{{cat.name}}</a>{% if not forloop.last %},{% endif %}
               {% endfor %}
             </em>
           </p>
