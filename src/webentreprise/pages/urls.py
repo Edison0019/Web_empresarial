@@ -3,5 +3,5 @@ from . import views as pv
 
 urlpatterns = [
     #app services
-    path('<int:page_id>/', pv.pages,name='pages'),
+    path('page/<int:page_id>/', pv.pages,name='pages'),
 ]

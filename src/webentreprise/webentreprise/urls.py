@@ -31,7 +31,7 @@ urlpatterns = [
     path('',include('blog.urls')),
 
     #views for the sample pages (privacy,coockie,disclaimers)
-    path('pages', include('pages.urls')),    
+    path('', include('pages.urls')),    
 
 ]
 
