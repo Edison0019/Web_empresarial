@@ -33,6 +33,7 @@ urlpatterns = [
     #views for the sample pages (privacy,coockie,disclaimers)
     path('', include('pages.urls')),    
 
+    path('',include('contact.urls'))
 ]
 
 from django.conf import settings

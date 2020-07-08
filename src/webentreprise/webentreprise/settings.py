@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'blog',
     'social.apps.SocialConfig',
     'pages.apps.PagesConfig',
+    'ckeditor',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,10 @@ STATIC_URL = '/static/'
 #creating the media URL
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+#CKEDITOR
+CKEDITOR_CONFIGS ={
+    'default' : {
+        'toolbar' : None
+    }
+}
