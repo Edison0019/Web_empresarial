@@ -20,6 +20,9 @@
             {% if 'ok' in request.GET %}
               <p><b>Your message has been received! we will contact you as soon as possible.</b></p>
             {% endif %}
+            {% if 'fail' in request.GET %}
+              <p><b>Your message wasn't sent, please try again.</b></p>
+            {% endif %}
             <!--<form method = "post" action = "">
               <table>
                 {{form.as_table}}
